@@ -22,13 +22,49 @@
 #  
 #  
 
-# THIS STILL IS TESTING
+# </ __init__.pss />
+data = input
+stream = print
 import argparse;_parser = argparse.ArgumentParser(description='LumiaPSS Initialization file, A.K.A. PSS Boot-Loader.')
 _parser.add_argument('-b',"--boot", help="Select booting option. Supported: \'text\' or \'ui\'.", default="text")
 _arg = _parser.parse_args()
-
-# try:
-#     print(_arg.boot)
-# except:
-#     print(_arg.b)
-
+import os
+from os import system as cons
+import configparser; _cfg_ = configparser.ConfigParser()
+_cfg_.read('./LSS-SYSTEM/__modules__.pss-config')
+clrm = _cfg_['modules']['colorama']
+kbrd = _cfg_['modules']['keyboard']
+if clrm == '0':
+    cons('python3 -m pip install colorama')
+    _cfg_['modules']['colorama'] = '1'
+    with open('./LSS-SYSTEM/__modules__.pss-config', 'w') as configfile:
+        _cfg_.write(configfile)
+elif clrm == '1':
+    stream(' ')
+else:
+    stream('Instalation of module \'colorama\' is unknown.')
+if kbrd == '0':
+    cons('python3 -m pip install keyboard')
+    _cfg_['modules']['keyboard'] = '1'
+    with open('./LSS-SYSTEM/__modules__.pss-config', 'w') as configfile:
+        _cfg_.write(configfile)
+elif kbrd == '1':
+    stream(' ')
+else:
+    stream('Instalation of module \'colorama\' is unknown.')
+_cls_ = cons('clear')
+from data import *
+try:
+    if namesmc == '':
+        stream(wmsg1+namesm+wmsg1end)
+    else:
+        stream(wmsg1+namesmc+wmsg1end)
+    if gitissuesc == '':
+        stream(wmsg2+gitissues)
+    else:
+        stream(wmsg2+gitissuesc)
+except:
+    stream('Error while importing from \'data.py\'.')
+#</ Console TEMP />
+# pss = data(' [ dev@LumiaPSS ] ~$ ')
+stream(f' [ dev@LumiaPSS ] ~$ exit\n Shutting down {namesm}...\n')
