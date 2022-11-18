@@ -31,13 +31,13 @@ _arg = _parser.parse_args()
 import os
 from os import system as cons
 import configparser; _cfg_ = configparser.ConfigParser()
-_cfg_.read('./LSS-SYSTEM/__modules__.pss-config')
+_cfg_.read('./LSS-DATA/__modules__.pss-config')
 clrm = _cfg_['modules']['colorama']
 kbrd = _cfg_['modules']['keyboard']
 if clrm == '0':
     cons('python3 -m pip install colorama')
     _cfg_['modules']['colorama'] = '1'
-    with open('./LSS-SYSTEM/__modules__.pss-config', 'w') as configfile:
+    with open('./LSS-DATA/__modules__.pss-config', 'w') as configfile:
         _cfg_.write(configfile)
 elif clrm == '1':
     stream(' ')
@@ -46,7 +46,7 @@ else:
 if kbrd == '0':
     cons('python3 -m pip install keyboard')
     _cfg_['modules']['keyboard'] = '1'
-    with open('./LSS-SYSTEM/__modules__.pss-config', 'w') as configfile:
+    with open('./LSS-DATA/__modules__.pss-config', 'w') as configfile:
         _cfg_.write(configfile)
 elif kbrd == '1':
     stream(' ')
