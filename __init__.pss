@@ -3,7 +3,7 @@
 #
 #  __init__.pss
 #  
-#  Copyright 2022  <UnipireOff>
+#  Copyright 2022  <FuzzyTheFoxx>
 #  
 #  This program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -25,8 +25,9 @@
 # </ __init__.pss />
 data = input
 stream = print
-import argparse;_parser = argparse.ArgumentParser(description='LumiaPSS Initialization file, A.K.A. PSS Boot-Loader.')
-_parser.add_argument('-b',"--boot", help="Select booting option. Supported: \'text\' or \'ui\'.", default="text")
+import argparse;_parser = argparse.ArgumentParser(exit_on_error=1, description='LumiaPSS Initialization file, A.K.A. PSS Boot-Loader.')
+# _parser.add_argument('-b',"--boot", help="Select booting option. Supported: \'text\' or \'ui\'.", default="text")
+_parser.add_argument('-d','--debug',choices='0''1', help='Debug Mode. Supported 0 > OFF, 1 > ON', default='0')
 _arg = _parser.parse_args()
 import os
 from os import system as cons
@@ -65,6 +66,7 @@ try:
         stream(wmsg2+gitissuesc)
 except:
     stream('Error while importing from \'data.py\'.')
+
 #</ Console TEMP />
 # pss = data(' [ dev@LumiaPSS ] ~$ ')
-stream(f' [ dev@LumiaPSS ] ~$ exit\n Shutting down {namesm}...\n')
+# stream(f' [ dev@LumiaPSS ] ~$ exit\n Shutting down {namesm}...\n')
