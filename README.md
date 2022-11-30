@@ -10,4 +10,9 @@ For now it'll be free to modificate & distribute, but with some conditions. *(Se
 
 If you want to support me, report issues at issues page, thank you.
 
+# Support & Compatibility
+For now the only supported platforms will be Linux and Windows.
+
+Compatibility guaranteed with Arch Linux and Windows 11
+
 <!-- More info soon... -->
