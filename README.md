@@ -10,9 +10,15 @@ For now it'll be free to modificate & distribute, but with some conditions. *(Se
 
 If you want to support me, report issues at issues page, thank you.
 
-# Support & Compatibility
-For now the only supported platforms will be Linux and Windows.
+# Source Code: How to?
+The "#Dev" folder is developmint folder and it's for testing only;
+To run my code, it is only possible with python* pre-installed**, and you must know basics of Linux terminal.
 
-Compatibility guaranteed with Arch Linux and Windows 11
+# Support
+For now the project will have support for Arch Linux
+
+
+--
+; *  Download python [here](https://www.python.org/downloads/). ; ** Most Linux distros (Like Arch, Debian, Ubuntu, etc.) have python pre-installed.
 
 <!-- More info soon... -->
