@@ -19,6 +19,6 @@ For now the project will have support for Arch Linux
 
 ᴿᵉᶠᵉʳᵉⁿᶜᵉˢ
 --
-; *  Download python [here](https://www.python.org/downloads/). ; ** Most Linux distros (Like Arch, Debian, Ubuntu, etc.) have python pre-installed. ;
+; *  Download python [`here`](https://www.python.org/downloads/). ; ** Most Linux distros (Like [`Arch`](https://archlinux.org), [`Debian`](https://debian.org), [`Ubuntu Desktop`](https://ubuntu.com/download/desktop), etc.) have python pre-installed. ;
 
 <!-- More info soon... -->
