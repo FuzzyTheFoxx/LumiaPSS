@@ -3,11 +3,6 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# PSS
-*.pss
-*.pss-config
-*.pbs
-
 # C extensions
 *.so
 

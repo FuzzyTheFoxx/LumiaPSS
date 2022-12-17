@@ -11,7 +11,7 @@ For now it'll be free to modificate & distribute, but with some conditions. *(Se
 If you want to support me, report issues at issues page, thank you.
 
 # Source Code: How to?
-The "#Dev" folder is development folder and it's for testing only;
+The [#Dev](/#Dev) folder is development folder and it's for testing only;
 To run my code, it is only possible with python* pre-installed**, and you must know basics of Linux terminal.
 
 # Support

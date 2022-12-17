@@ -1,0 +1,141 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+#
+#  __init__.pss
+#
+#  Copyright 2022  <FuzzyTheFoxx>
+#
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, write to the Free Software
+#  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+#  MA 02110-1301, USA.
+#
+#
+from os import system as cons
+from os import name as sysname
+import configparser
+import os
+from time import sleep
+import time
+from _classes_ import *
+import argparse
+stream(f' <-- LumiaPSS - DEV -->')
+_parser = argparse.ArgumentParser(
+    exit_on_error=1, description='LumiaPSS Initialization file, A.K.A. PSS Boot-Loader.'
+)
+# _parser.add_argument('-b',"--boot",choices='0''1', help="Select booting option. Supported 0 > text.", default='0')
+_parser.add_argument('--clear', choices='0''1',
+                     help='Clears screen on start-up. Supported 0 > ON, 1 > OFF', default='0'
+                     )
+_parser.add_argument('--debug', choices='0''1',
+                     help='Debug Mode. Supported 0 > OFF, 1 > ON', default='0'
+                     )
+_arg = _parser.parse_args()
+
+
+def _clear_():
+    if os.name == 'posix':
+        _ = cons(f'clear')
+    else:
+        _ = cons(f'cls')
+
+
+_cfg_ = configparser.ConfigParser()
+try:
+    _cfg_.read(f'./{systm}/__modules__.pss-config')
+    clrm = _cfg_['modules']['colorama']
+    kbrd = _cfg_['modules']['keyboard']
+except:
+    stream(f'Error importing from ./{systm}/__modules__.pss-config')
+try:
+    if clrm == '0':
+        cons(f'./{systm}/python.exe -m pip install colorama')
+        _cfg_['modules']['colorama'] = '1'
+        with open(f'./{systm}/__modules__.pss-config', 'w') as configfile:
+            _cfg_.write(configfile)
+    elif clrm == '1':
+        stream(f' ')
+    else:
+        stream(f' Fixing instalation of \'colorama\'. . .')
+        cons(f'./{systm}/python.exe -m pip install colorama')
+        _cfg_['modules']['colorama'] = '1'
+        with open(f'./{systm}/__modules__.pss-config', 'w') as configfile:
+            _cfg_.write(configfile)
+except:
+    stream(f' Fixing instalation of \'colorama\'. . .')
+    cons(f'./{systm}/python.exe -m pip install colorama')
+    _cfg_['modules']['colorama'] = '1'
+    with open(f'./{systm}/__modules__.pss-config', 'w') as configfile:
+        _cfg_.write(configfile)
+try:
+    if kbrd == '0':
+        cons(f'./{systm}/python.exe -m pip install keyboard')
+        _cfg_['modules']['keyboard'] = '1'
+        with open(f'./{systm}/__modules__.pss-config', 'w') as configfile:
+            _cfg_.write(configfile)
+    elif kbrd == '1':
+        stream(f' ')
+    else:
+        stream(f' Fixing instalation of \'keyboard\'. . .')
+        cons(f'./{systm}/python.exe -m pip install keyboard')
+        _cfg_['modules']['keyboard'] = '1'
+        with open(f'./{systm}/__modules__.pss-config', 'w') as configfile:
+            _cfg_.write(configfile)
+except:
+    stream(f' Fixing instalation of \'keyboard\'. . .')
+    cons(f'./{systm}/python.exe -m pip install keyboard')
+    _cfg_['modules']['keyboard'] = '1'
+    with open(f'./{systm}/__modules__.pss-config', 'w') as configfile:
+        _cfg_.write(configfile)
+from colorama import Back as _back_
+from colorama import Fore as _color_
+import colorama
+try:
+    if _arg.debug == '0':
+        stream(f'')
+    elif _arg.debug == '1':
+        stream(f' {_color_.RED}// DEBUG MODE ON //{_color_.RESET}')
+    else:
+        stream(f'')
+    if _arg.debug == '1':
+        stream(f' DEBUG: STATUS OF DEBUG MODE: {_arg.debug}')
+    if _arg.clear == '0':
+        _clear_()
+    if _arg.debug == '1':
+        if _arg.clear == '1':
+            stream(f' DEBUG: STATUS OF CLEAR MODE: {_arg.clear}')
+except:
+    stream(f'Initialization of \'Debug Mode\' is unknown.')
+cons(f'python3 ./{systm}/__import__.pexec')
+try:
+    if namesmc == '':
+        stream(f'{wmsg1}')
+    else:
+        stream(f'{wmsg1c}')
+    if gitissuesc == '':
+        stream(f'{wmsg2}{gitissues}')
+    else:
+        stream(f'{wmsg2}{gitissuesc}')
+except:
+    stream(f'Error while importing from \'data.py\'.')
+stream(f'Host name is: \'{sysname}\'')
+
+# </ Console - TEMP />
+cons(f'python3 ./{systm}/__csl__.pexec')
+stream(f'System folder is: \'{systm}\'')
+
+
+
+# </ STOP - TEMP />
+stream(f'\n\n -- END OF FILE --')
+exit
