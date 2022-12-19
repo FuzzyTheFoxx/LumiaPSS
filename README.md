@@ -1,8 +1,10 @@
 # README UNDER CONSTRUCTION
 
 ## LumiaPSS
-New version of (Now dead) LumiaOS (Project Lumia)
+New version of *(Now dead)* LumiaOS (Project Lumia)
+Also visit the [wiki](https://github.com/FuzzyTheFoxx/LumiaPSS/wiki)!
 
+*(When it's finished)*
 
 ### Basic Info
 LumiaPSS (LumiaPythonScriptSystem) will be command-line system.
