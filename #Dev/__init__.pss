@@ -55,46 +55,67 @@ try:
     _cfg_.read(f'./{systm}/__modules__.pss-config')
     clrm = _cfg_['modules']['colorama']
     kbrd = _cfg_['modules']['keyboard']
+    crsr = _cfg_['modules']['cursor']
 except:
     stream(f'Error importing from ./{systm}/__modules__.pss-config')
 try:
     if clrm == '0':
-        cons(f'./{systm}/python.exe -m pip install colorama')
+        cons(f'python3 -m pip install colorama')
         _cfg_['modules']['colorama'] = '1'
         with open(f'./{systm}/__modules__.pss-config', 'w') as configfile:
             _cfg_.write(configfile)
     elif clrm == '1':
-        stream(f' ')
+        stream()
     else:
         stream(f' Fixing instalation of \'colorama\'. . .')
-        cons(f'./{systm}/python.exe -m pip install colorama')
+        cons(f'python3 -m pip install colorama')
         _cfg_['modules']['colorama'] = '1'
         with open(f'./{systm}/__modules__.pss-config', 'w') as configfile:
             _cfg_.write(configfile)
 except:
     stream(f' Fixing instalation of \'colorama\'. . .')
-    cons(f'./{systm}/python.exe -m pip install colorama')
+    cons(f'python3 -m pip install colorama')
     _cfg_['modules']['colorama'] = '1'
     with open(f'./{systm}/__modules__.pss-config', 'w') as configfile:
         _cfg_.write(configfile)
 try:
     if kbrd == '0':
-        cons(f'./{systm}/python.exe -m pip install keyboard')
+        cons(f'python3 -m pip install keyboard')
         _cfg_['modules']['keyboard'] = '1'
         with open(f'./{systm}/__modules__.pss-config', 'w') as configfile:
             _cfg_.write(configfile)
     elif kbrd == '1':
-        stream(f' ')
+        stream()
     else:
         stream(f' Fixing instalation of \'keyboard\'. . .')
-        cons(f'./{systm}/python.exe -m pip install keyboard')
+        cons(f'python3 -m pip install keyboard')
         _cfg_['modules']['keyboard'] = '1'
         with open(f'./{systm}/__modules__.pss-config', 'w') as configfile:
             _cfg_.write(configfile)
 except:
     stream(f' Fixing instalation of \'keyboard\'. . .')
-    cons(f'./{systm}/python.exe -m pip install keyboard')
+    cons(f'python3 -m pip install keyboard')
     _cfg_['modules']['keyboard'] = '1'
+    with open(f'./{systm}/__modules__.pss-config', 'w') as configfile:
+        _cfg_.write(configfile)
+try:
+    if crsr == '0':
+        cons(f'python3 -m pip install cursor')
+        _cfg_['modules']['cursor'] = '1'
+        with open(f'./{systm}/__modules__.pss-config', 'w') as configfile:
+            _cfg_.write(configfile)
+    elif crsr == '1':
+        stream()
+    else:
+        stream(f' Fixing instalation of \'cursor\'. . .')
+        cons(f'python3 -m pip install cursor')
+        _cfg_['modules']['cursor'] = '1'
+        with open(f'./{systm}/__modules__.pss-config', 'w') as configfile:
+            _cfg_.write(configfile)
+except:
+    stream(f' Fixing instalation of \'cursor\'. . .')
+    cons(f'python3 -m pip install cursor')
+    _cfg_['modules']['cursor'] = '1'
     with open(f'./{systm}/__modules__.pss-config', 'w') as configfile:
         _cfg_.write(configfile)
 from colorama import Back as _back_
