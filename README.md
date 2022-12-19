@@ -4,8 +4,9 @@
 New version of *(Now dead)* LumiaOS (Project Lumia)
 
 Also visit the [wiki](https://github.com/FuzzyTheFoxx/LumiaPSS/wiki)!
-
-*(When it's finished)*
+```
+Fuzzy@GitHub~$ When it's finally finished.
+```
 
 ### Basic Info
 LumiaPSS (LumiaPythonScriptSystem) will be command-line system.
@@ -24,11 +25,8 @@ To run my code, it is only possible with python* pre-installed**, and you must k
 
 ### Support
 ```
-<!--
-Well, this will be difficult to explain
--->
+Fuzzy@GitHub~$ Well, this will be difficult to explain
 ```
-*Actual part of README.md*
 
 ⠀
 --
@@ -36,5 +34,5 @@ Well, this will be difficult to explain
 ; *  Download python [`here`](https://www.python.org/downloads/). ; ** Most Linux distros (Like [`Arch`](https://archlinux.org), [`Debian`](https://debian.org), [`Ubuntu Desktop`](https://ubuntu.com/download/desktop), etc.) have python pre-installed. ;
 
 ```
-<!-- More info soon... -->
+Fuzzy@GitHub~$ More info soon...
 ```
