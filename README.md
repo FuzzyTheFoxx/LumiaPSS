@@ -2,6 +2,7 @@
 
 ## LumiaPSS
 New version of *(Now dead)* LumiaOS (Project Lumia)
+
 Also visit the [wiki](https://github.com/FuzzyTheFoxx/LumiaPSS/wiki)!
 
 *(When it's finished)*
@@ -27,11 +28,13 @@ To run my code, it is only possible with python* pre-installed**, and you must k
 Well, this will be difficult to explain
 -->
 ```
-*Actuale part of README.md*
+*Actual part of README.md*
 
 ⠀
 --
-#### References <!-- ᴿᵉᶠᵉʳᵉⁿᶜᵉˢ -->
+#### References
 ; *  Download python [`here`](https://www.python.org/downloads/). ; ** Most Linux distros (Like [`Arch`](https://archlinux.org), [`Debian`](https://debian.org), [`Ubuntu Desktop`](https://ubuntu.com/download/desktop), etc.) have python pre-installed. ;
 
+```
 <!-- More info soon... -->
+```
