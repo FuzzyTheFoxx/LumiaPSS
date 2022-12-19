@@ -27,12 +27,16 @@ To run my code, it is only possible with python* pre-installed**, and you must k
 ```
 Fuzzy@GitHub~$ Well, this will be difficult to explain
 ```
+<!--⠀-->
+
+References
+--
+`*`  Download python [`here`](https://www.python.org/downloads/). 
+
+`**` Most Linux distros have python pre-installed.
 
 ⠀
 --
-#### References
-; *  Download python [`here`](https://www.python.org/downloads/). ; ** Most Linux distros (Like [`Arch`](https://archlinux.org), [`Debian`](https://debian.org), [`Ubuntu Desktop`](https://ubuntu.com/download/desktop), etc.) have python pre-installed. ;
-
 ```
 Fuzzy@GitHub~$ More info soon...
 ```
