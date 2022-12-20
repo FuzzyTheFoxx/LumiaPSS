@@ -29,14 +29,22 @@ from _classes_csl_ import *
 from colorama import Back as _back_
 from colorama import Fore as _color_
 _rs_ = _color_.RESET
-_r_ = _color_.RED
-_y_ = _color_.YELLOW
-_g_ = _color_.GREEN
+_r_ = _color_.LIGHTRED_EX
+_y_ = _color_.LIGHTYELLOW_EX
+_g_ = _color_.LIGHTGREEN_EX
 
 # </ Console TEMP />
 pss = data('\n [/] '+_r_+'❱'+_y_+'❱'+_g_+'❱'+_rs_+' ')
 if pss == 'ext':
     cons('exit')
-# stream(f'\n >>> [/CorePSS] ~ exit\n Shutting down {namesm}...')
-
-exit
+elif pss == 'lstdir':
+    cons('ls')
+else:
+    if pss == '':
+        stream(f'{shell}: No command supplied.')
+        exit
+    else:
+        stream(
+            f' {shell}: \'{pss}\': command not found.'
+        )
+        cons(f'python3 {systm}/__csl__.pexec')

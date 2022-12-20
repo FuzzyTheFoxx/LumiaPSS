@@ -8,6 +8,8 @@ Also visit the [wiki](https://github.com/FuzzyTheFoxx/LumiaPSS/wiki)!
 Fuzzy@GitHub~$ When it's finally finished.
 ```
 
+
+
 ### Basic Info
 LumiaPSS (LumiaPythonScriptSystem) will be command-line system.
 The old version (LumiaOS) wanted to be the same, but without command line, and text-based UI/UX.

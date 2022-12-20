@@ -26,6 +26,7 @@
 # </ _pssdata_.py />
 data = input
 stream = print
+shell = 'PSS'
 namesm = 'LumiaPSS'                                              #In use
 namelg = 'LumiaPythonScriptSystem'
 wmsg1 = f'Hello! This is early development version of {namesm}!' #In use
