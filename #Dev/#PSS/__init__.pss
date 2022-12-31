@@ -34,14 +34,14 @@ _parser = argparse.ArgumentParser(
     exit_on_error=1, description='LumiaPSS Initialization file, A.K.A. PSS Boot-Loader.'
 )
 # _parser.add_argument('-b',"--boot",choices='0''1', help="Select booting option. Supported 0 > text.", default='0')
-_parser.add_argument('--clear', choices='0''1',
-                     help='Clears screen on start-up. Supported 0 > ON, 1 > OFF', default='0'
+_parser.add_argument('--clear',
+                     help='Clears screen on start-up.', default='clear-false'
                      )
-_parser.add_argument('--debug', choices='0''1',
-                     help='Debug Mode. Supported 0 > OFF, 1 > ON', default='0'
+_parser.add_argument('--debug',
+                     help='Debug Mode.', default='0'
                      )
 _parser.add_argument('--csl',
-                     help='Boots directly to console, skipping all scripts. Supported 0 > OFF, 1 > ON', default='0'
+                     help='Boots directly to console, skipping all scripts.', default='false'
                      )
 _arg = _parser.parse_args()
 
@@ -52,7 +52,7 @@ def _clear_():
     else:
         _ = cons(f'cls')
 
-if _arg.csl == '1':
+if _arg.csl == 'true':
     from colorama import Back as _back_
     from colorama import Fore as _color_
     import colorama
@@ -63,6 +63,7 @@ if _arg.csl == '1':
     pss = data('\n [/] '+_r_+'❱'+_y_+'❱'+_g_+'❱'+_rs_+' ')
     if pss == 'ext':
         stream('Spam [Ctrl]+[C] buttons, exit functionality not fully implemented.')
+        time.sleep(2)
     elif pss == 'ls':
         cons(f'{pss}')
         cons('python3 __init__.pss --csl 1')
@@ -155,19 +156,14 @@ _r_ = _color_.LIGHTRED_EX
 _y_ = _color_.LIGHTYELLOW_EX
 _g_ = _color_.LIGHTGREEN_EX
 try:
-    if _arg.debug == '0':
-        stream(f'')
-    elif _arg.debug == '1':
+    if _arg.debug == 'debug-true':
         stream(f' {_color_.RED}// DEBUG MODE ON //{_color_.RESET}')
-    else:
-        stream(f'')
-    if _arg.debug == '1':
         stream(f' DEBUG: STATUS OF DEBUG MODE: {_arg.debug}')
-    if _arg.clear == '0':
-        _clear_()
-    if _arg.debug == '1':
-        if _arg.clear == '1':
+        if _arg.clear == 'clear-true':
             stream(f' DEBUG: STATUS OF CLEAR MODE: {_arg.clear}')
+    if _arg.clear == 'clear-true':
+        _clear_()
+
 except:
     stream(f'Initialization of \'Debug Mode\' is unknown.')
 cons(f'python3 ./{systm}/__import__.pexec')
@@ -182,37 +178,9 @@ try:
         stream(f'{wmsg2}{gitissuesc}')
 except:
     stream(f'Error while importing from \'_classes_.py\'.')
-stream(f'Host name is: \'{sysname}\'')
+if _arg.debug == 'debug-true':
+    stream(f'Host name is: \'{sysname}\'')
+    stream(f'System folder is: \'{systm}\'')
 
-# </ Console - TEMP />
-cons(f'python3 ./{systm}/__csl__.pexec')
-stream(f'System folder is: \'{systm}\'')
+cons('python3 __init__.pss --csl true')
 
-cons('python3 __init__.pss --csl 1')
-
-
-
-
-# pss = data('\n [/] '+_r_+'❱'+_y_+'❱'+_g_+'❱'+_rs_+' ')
-#     if pss == 'ext':
-#         stream('Spam [Ctrl]+[C] buttons, exit functionality not fully implemented.')
-#     elif pss == 'ls':
-#         cons(f'{pss}')
-#         cons('python3 __init__.pss --csl 1')
-#     elif pss == 'ls CorePSS':
-#         cons(f'{pss}')
-#         cons('python3 __init__.pss --csl 1')
-#     else:
-#         if pss == '':
-#             stream(f'{shell}: No command supplied.')
-#             cons('python3 __init__.pss --csl 1')
-#         else:
-#             stream(
-#                 f' {shell}: \'{pss}\': command not found.'
-#             )
-#             cons('python3 __init__.pss --csl 1')
-
-
-# # </ STOP - TEMP />
-# stream(f'\n\n -- END OF FILE --')
-# exit
