@@ -18,9 +18,6 @@ For now it'll be free to modificate & distribute, but with some conditions. *(Se
 
 If you want to support me, report issues at issues page, thank you.
 
-### To-Do
-[< link >](https://trello.com/b/tPTr3xpf/terranian-translator)
-
 ### Source Code: How to?
 The "#Dev" folder is development folder and it's for testing only;
 To run my code, it is only possible with python* pre-installed**, and you must know basics of Linux terminal.
